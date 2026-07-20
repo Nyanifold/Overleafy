@@ -10,6 +10,7 @@
     "packages/",
     "skills/",
     "scripts/",
+    "node_modules/@nyanifold/",
     "README.md",
     "README.en.md",
     "LICENSE"
@@ -27,22 +28,10 @@
     "prepare": "node scripts/prepare-bins.mjs"
   },
   "dependencies": {
-    "@nyanifold/cli": "*",
-    "@nyanifold/config": "*",
-    "@nyanifold/core": "*",
-    "@nyanifold/git": "*",
-    "@nyanifold/overleaf": "*",
     "commander": "^15.0.0",
     "minimatch": "^10.2.5",
     "zod": "^4.4.3"
   },
-  "bundledDependencies": [
-    "@nyanifold/cli",
-    "@nyanifold/config",
-    "@nyanifold/core",
-    "@nyanifold/git",
-    "@nyanifold/overleaf"
-  ],
   "engines": {
     "node": ">=22.14.0"
   },
