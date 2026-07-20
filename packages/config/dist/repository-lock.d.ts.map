@@ -1,1 +1,0 @@
-{"version":3,"file":"repository-lock.d.ts","sourceRoot":"","sources":["../src/repository-lock.ts"],"names":[],"mappings":"AAIA,OAAO,EAEL,KAAK,oBAAoB,EACzB,KAAK,kBAAkB,EACxB,MAAM,iBAAiB,CAAC;AAUzB,qBAAa,kBAAmB,YAAW,kBAAkB;IACrD,OAAO,CACX,cAAc,EAAE,MAAM,EACtB,WAAW,EAAE,MAAM,GAClB,OAAO,CAAC,oBAAoB,CAAC;CA2DjC"}
