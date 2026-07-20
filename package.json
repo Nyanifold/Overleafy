@@ -17,7 +17,7 @@
     "test": "npm run build && node --test packages/*/dist/*.test.js",
     "check": "npm run lint && npm test",
     "cli": "node packages/cli/dist/main.js",
-    "prepare": "npm run build"
+    "prepare": "tsc -b 2>/dev/null; node scripts/prepare-bins.mjs"
   },
   "engines": {
     "node": ">=22.14.0"

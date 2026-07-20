@@ -1,0 +1,1 @@
+{"version":3,"file":"state-store.d.ts","sourceRoot":"","sources":["../src/state-store.ts"],"names":[],"mappings":"AAUA,OAAO,EAEL,KAAK,cAAc,EACnB,KAAK,SAAS,EACf,MAAM,iBAAiB,CAAC;AA4DzB,qBAAa,cAAe,YAAW,cAAc;IAC7C,IAAI,CAAC,cAAc,EAAE,MAAM,GAAG,OAAO,CAAC,SAAS,CAAC;IA2BhD,KAAK,CAAC,cAAc,EAAE,MAAM,EAAE,KAAK,EAAE,SAAS,GAAG,OAAO,CAAC,IAAI,CAAC;CAkBrE"}
