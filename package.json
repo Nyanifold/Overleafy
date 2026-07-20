@@ -18,6 +18,11 @@
     "cli": "node packages/cli/dist/main.js",
     "prepare": "tsc -b 2>/dev/null; node scripts/prepare-bins.mjs"
   },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "minimatch": "^10.2.5",
+    "zod": "^4.4.3"
+  },
   "engines": {
     "node": ">=22.14.0"
   },
