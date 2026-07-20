@@ -24,8 +24,7 @@
     "lint": "eslint .",
     "test": "npm run build && node --test packages/*/dist/*.test.js",
     "check": "npm run lint && npm test",
-    "cli": "node packages/cli/dist/main.js",
-    "prepare": "node scripts/prepare-bins.mjs"
+    "cli": "node packages/cli/dist/main.js"
   },
   "dependencies": {
     "commander": "^15.0.0",
