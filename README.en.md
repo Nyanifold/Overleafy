@@ -155,6 +155,10 @@ export OVERLEAFY_GIT_TOKEN="your-git-token"
 
 This env var is never persisted and takes precedence over `~/.overleaf_config.json`.
 
+### AI Agent Integration
+
+This project ships an [overleafy-guide](skills/overleafy-guide/) skill that gives Claude Code, Codex, and other agents a complete CLI reference — covering auth, binding, plan-reviewed sync, conflict recovery, and error diagnostics.
+
 ## Security
 
 - **Credential isolation**: Tokens and cookies live in `~/.overleaf_config.json` (0600).

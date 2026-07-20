@@ -1,0 +1,4 @@
+interface:
+  display_name: "Overleafy Guide"
+  short_description: "Safely manage, sync, troubleshoot, and recover Overleaf document projects"
+  default_prompt: "Use $overleafy-guide to inspect and safely sync the current Overleaf project."
