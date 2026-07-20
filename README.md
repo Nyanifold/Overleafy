@@ -13,7 +13,7 @@
 ## 安装
 
 ```bash
-npm install --global git+https://github.com/Nyanifold/overleafy.git
+npm install --global @nyanifold/overleafy
 ```
 
 前提：Node.js ≥ 22.14，Git 任意现代版本，Overleaf 账户开启 Git Integration。
@@ -177,7 +177,7 @@ overleafy clone <id> \
 ## 架构
 
 ```
-packages/
+src/
 ├── core/       # 领域模型、状态分类、计划器
 ├── git/        # Git 适配器（快照、fetch、merge、push）
 ├── overleaf/   # Overleaf 适配器（Git remote、Cookie Web API）

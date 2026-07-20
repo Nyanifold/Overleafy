@@ -17,7 +17,7 @@ Author: [**Nyanifold**](https://github.com/Nyanifold)
 ## Install
 
 ```bash
-npm install --global git+https://github.com/Nyanifold/overleafy.git
+npm install --global @nyanifold/overleafy
 ```
 
 Prerequisites: Node.js ≥ 22.14, a modern version of Git, and an Overleaf account with Git Integration enabled.
@@ -180,7 +180,7 @@ overleafy clone <id> \
 ## Architecture
 
 ```
-packages/
+src/
 ├── core/       # Domain model, state classification, planner
 ├── git/        # Git adapter (snapshot, fetch, merge, push)
 ├── overleaf/   # Overleaf adapter (Git remote, Cookie Web API)
