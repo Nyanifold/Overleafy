@@ -16,7 +16,7 @@
     "test": "npm run build && node --test packages/*/dist/*.test.js",
     "check": "npm run lint && npm test",
     "cli": "node packages/cli/dist/main.js",
-    "prepare": "tsc -b 2>/dev/null; node scripts/prepare-bins.mjs"
+    "prepare": "node scripts/prepare-bins.mjs"
   },
   "dependencies": {
     "commander": "^15.0.0",
