@@ -1,0 +1,32 @@
+{
+  "name": "overleafy",
+  "version": "0.1.0",
+  "author": "Nyanifold",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "bin": {
+    "overleafy": "./packages/cli/dist/main.js"
+  },
+  "scripts": {
+    "build": "tsc -b && node scripts/prepare-bins.mjs",
+    "clean": "tsc -b --clean",
+    "lint": "eslint .",
+    "test": "npm run build && node --test packages/*/dist/*.test.js",
+    "check": "npm run lint && npm test",
+    "cli": "node packages/cli/dist/main.js",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=22.14.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@types/node": "^22.20.1",
+    "eslint": "^9.31.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "^8.38.0"
+  }
+}

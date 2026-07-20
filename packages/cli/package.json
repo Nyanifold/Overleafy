@@ -1,0 +1,19 @@
+{
+  "name": "@nyanifold/cli",
+  "version": "0.1.0",
+  "author": "Nyanifold",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "overleafy": "./dist/main.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "@nyanifold/config": "*",
+    "@nyanifold/core": "*",
+    "@nyanifold/git": "*",
+    "@nyanifold/overleaf": "*",
+    "commander": "^15.0.0"
+  }
+}
