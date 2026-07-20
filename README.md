@@ -157,6 +157,16 @@ export OVERLEAFY_GIT_TOKEN="your-git-token"
 
 本项目附带 [overleafy-guide](skills/overleafy-guide/) Skill，可为 Claude Code、Codex 等 Agent 提供完整的 CLI 操作指南——包括认证绑定、计划审查、同步编辑、冲突恢复和错误诊断。
 
+使用 `overleafy skill` 即可获取完整指南：
+
+```bash
+overleafy skill                        # 输出 SKILL.md + 命令参考到终端
+overleafy skill -o overleafy-guide.md  # 写入指定文件
+overleafy skill -o ./skills/           # 目标为目录时，写入 overleafy-guide.md
+overleafy skill --full                 # 复制整个 overleafy-guide 目录到当前目录
+overleafy skill --full -o ./skills/    # 复制到指定目录下
+```
+
 ## 安全设计
 
 - **凭证隔离**：Token/Cookie 存 `~/.overleaf_config.json`（0600），Git 操作使用

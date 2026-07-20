@@ -29,6 +29,7 @@ import {
   writeResult,
 } from "./output.js";
 import { promptSecret, readSecretFile } from "./secret-input.js";
+import { copySkillGuide, printSkillGuide } from "./skill.js";
 
 interface GlobalOptions {
   json?: boolean;
@@ -883,6 +884,52 @@ export function createProgram(): Command {
               : code === "PLAN_STALE" || code === "REMOTE_MOVED"
                 ? 5
                 : 8;
+        }
+      },
+    );
+
+  program
+    .command("skill")
+    .description(
+      "Print the overleafy agent skill guide (SKILL.md + commands.md). " +
+        "Use shell redirection or -o to write to a file, e.g. overleafy skill -o guide.md.",
+    )
+    .option(
+      "-o, --output <path>",
+      "write guide to <path> (existing dir → overleafy-guide.md inside it; otherwise treated as a file)",
+    )
+    .option(
+      "--full",
+      "copy the entire overleafy-guide directory to the output directory (-o is parent dir)",
+    )
+    .action(
+      async (
+        options: { output?: string; full?: boolean },
+        command: Command,
+      ) => {
+        const json = isJson(command);
+        try {
+          if (options.full) {
+            const targetDir = options.output ?? process.cwd();
+            await copySkillGuide(targetDir);
+            writeResult(
+              result({ outputDir: targetDir, copied: true }),
+              json,
+              (data) =>
+                `Copied overleafy-guide directory to '${data.outputDir}'.`,
+            );
+          } else {
+            const dest = await printSkillGuide(options.output);
+            if (!json) return;
+            writeResult(
+              result({ outputPath: dest }),
+              true,
+              () => `Wrote guide to ${dest}.`,
+            );
+          }
+        } catch (error) {
+          writeError(error, json);
+          process.exitCode = 8;
         }
       },
     );

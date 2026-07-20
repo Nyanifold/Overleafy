@@ -159,6 +159,16 @@ This env var is never persisted and takes precedence over `~/.overleaf_config.js
 
 This project ships an [overleafy-guide](skills/overleafy-guide/) skill that gives Claude Code, Codex, and other agents a complete CLI reference — covering auth, binding, plan-reviewed sync, conflict recovery, and error diagnostics.
 
+Use `overleafy skill` to obtain the full guide:
+
+```bash
+overleafy skill                        # print SKILL.md + command reference to stdout
+overleafy skill -o overleafy-guide.md  # write to a specific file
+overleafy skill -o ./skills/           # when target is a directory, writes overleafy-guide.md inside
+overleafy skill --full                 # copy the entire overleafy-guide directory to cwd
+overleafy skill --full -o ./skills/    # copy to a specific parent directory
+```
+
 ## Security
 
 - **Credential isolation**: Tokens and cookies live in `~/.overleaf_config.json` (0600).
