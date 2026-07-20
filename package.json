@@ -6,6 +6,14 @@
   "workspaces": [
     "packages/*"
   ],
+  "files": [
+    "packages/",
+    "skills/",
+    "scripts/",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
   "bin": {
     "overleafy": "./packages/cli/dist/main.js"
   },
